@@ -93,7 +93,8 @@ contract Resolver is SchemaResolver {
         }
     }
 
+    /// @notice Attestation should not be revoked
     function onRevoke(Attestation calldata, /*attestation*/ uint256 /*value*/ ) internal pure override returns (bool) {
-        return true;
+        return false;
     }
 }
